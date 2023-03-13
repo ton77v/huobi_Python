@@ -1,5 +1,6 @@
 from huobi.constant import *
 
+
 class Chain:
     """
     The Huobi Chain.
@@ -29,6 +30,7 @@ class Chain:
         self.chain = ""
         self.baseChain = ""
         self.baseChainProtocol = ""
+        self.displayName = ""  # when baseChain is None this is where 2 find the data | see "def default_parse("
         self.numOfConfirmations = 0
         self.numOfFastConfirmations = 0
         self.depositStatus = ChainDepositStatus.INVALID
@@ -51,6 +53,7 @@ class Chain:
         PrintBasic.print_basic(self.chain, format_data + "Chain")
         PrintBasic.print_basic(self.baseChain, format_data + "Base Chain")
         PrintBasic.print_basic(self.baseChainProtocol, format_data + "Base Chain Protocol")
+        PrintBasic.print_basic(self.displayName, format_data + "Chain Alt Name")
         PrintBasic.print_basic(self.numOfConfirmations, format_data + "numOfConfirmations")
         PrintBasic.print_basic(self.numOfFastConfirmations, format_data + "numOfFastConfirmations")
         PrintBasic.print_basic(self.depositStatus, format_data + "depositStatus")
