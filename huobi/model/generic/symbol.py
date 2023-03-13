@@ -43,6 +43,7 @@ class Symbol:
         self.sell_market_max_order_amt = 0
         self.buy_market_max_order_value = 0
         self.max_order_value = 0
+        self.api_trading = ""
 
     def print_object(self, format_data=""):
         from huobi.utils.print_mix_object import PrintBasic
@@ -64,3 +65,4 @@ class Symbol:
         PrintBasic.print_basic(self.sell_market_max_order_amt, format_data + "Max order amount (Sell Market Order)")
         PrintBasic.print_basic(self.buy_market_max_order_value, format_data + "Max order value (Buy Market Order)")
         PrintBasic.print_basic(self.max_order_value, format_data + "Max order value (In USDT)")
+        PrintBasic.print_basic(self.api_trading, format_data + "API Trading")
